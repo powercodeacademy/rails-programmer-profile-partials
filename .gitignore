@@ -35,11 +35,36 @@ jspm_packages
 # Ignore bundler config.
 /.bundle
 
-# Ignore the default SQLite database.
+
+# Ignore the default SQLite database and related files
 /db/*.sqlite3
 /db/*.sqlite3-journal
+/db/*.sqlite3-*
+
+# Ignore log, tmp, and sensitive config
+/log/*
+!/log/.keep
+/tmp
+/config/master.key
+/config/credentials.yml.enc
+
+# Ignore byebug history
+.byebug_history
+
+# Ignore coverage reports
+/coverage/
+
+# Ignore node/yarn files if present
+/node_modules/
+/yarn-error.log
+
+# Ignore editor swap files
+*.swp
+*.swo
 
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
+
+/config/master.key
